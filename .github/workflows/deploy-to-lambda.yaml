@@ -40,4 +40,7 @@ jobs:
           aws s3 cp deploy.zip s3://nodejsartifactsdeploy/deploy.zip
       - name: AWS Deploy
         run: |
-          aws lambda update-function-code --function-name nodejs-deploy --zip-file s3://nodejsartifactsdeploy/deploy.zip
+          aws lambda update-function-code \
+            --function-name nodejs-deploy \
+            --s3-bucket nodejsartifactsdeploy \
+            --s3-key deploy.zip
