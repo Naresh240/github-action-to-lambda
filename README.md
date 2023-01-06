@@ -6,19 +6,34 @@
 
 ```bash
 1. Create Lambda Function with the name of ```nodejs-deploy``` and add role to communicate with API Gateway
-2. Create API Gateway 
-3. Create Github Action Pipeline
-4. Add secrets under GIT REPO secrets (AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY)
+2. Add secrets under GIT REPO secrets (AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY)
 ```
 
 ## Create secrets under git repository
 
 ![image](https://user-images.githubusercontent.com/58024415/210535109-a04c83db-5716-4184-bed3-3605b7e7f509.png)
 
-## Attach API GATEWAY to Lambda as trigger
+## Create Lambda Role to communicate with API Gateway
 
-![image](https://user-images.githubusercontent.com/58024415/210534664-ca07e633-af3b-456b-a54b-5d99365ea5fa.png)
+```Note:``` Here I have created and attached admin role to lambda
+
+![image](https://user-images.githubusercontent.com/58024415/211065094-0e0963a0-1687-49ac-b7d4-c4599283f723.png)
+
+## Create Lambda Function With Nodejs Runtime and attach existing role
+
+![image](https://user-images.githubusercontent.com/58024415/211064856-535d5b47-ac5b-49a3-98a5-bd1e296f3db6.png)
+
+
+## Attach API GATEWAY to Lambda from Trigger 
+
+```step1:``` Click on Trigger in Lambda and give trigger configuration details
+
+![image](https://user-images.githubusercontent.com/58024415/211064345-d4120634-7f6b-4395-a66c-934e05e4d82a.png)
+
+```step2``` Click on create
+
+![image](https://user-images.githubusercontent.com/58024415/211064567-327ab337-0583-43fb-a472-7e64e2db3fcc.png)
 
 ## Check application output
 
-![image](https://user-images.githubusercontent.com/58024415/210534827-26dd5344-7ec4-47c1-bb28-9cef9f6138d0.png)
+![Uploading image.png…]()
